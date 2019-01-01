@@ -1,7 +1,16 @@
 [package]
-name = "Skribe"
+name = "skribe"
 version = "0.1.0"
 authors = ["German Lashevich <german.lashevich@gmail.com>"]
 edition = "2018"
 
 [dependencies]
+uuid = { version = "0.7.1", features = ["serde", "v4"] }
+chrono = { version = "0.4.6", features = ["serde"] }
+clap = { version = "2.32.0", features = ["yaml"] }
+nom = "4.1.1"
+serde = "1.0.83"
+serde_derive = "1.0.83"
+dirs = "1.0.4"
+failure = "0.1.4"
+toml = "0.4.10"

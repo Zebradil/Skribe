@@ -1,0 +1,51 @@
+name: skribe
+version: "0.1.0"
+author: German Lashevich <german.lashevich@gmail.com>
+about: Helps to organize tasks and notes, it's a hybrid of evernote and taskwarrior
+
+subcommands:
+- init:
+    about: initializes new configuration directory and database
+- add:
+    about: adds a new note
+    args:
+    - tags:
+        short: t
+        long: tags
+        help: a tags list
+        multiple: true
+        takes_value: true
+    - text:
+        last: true
+        multiple: true
+        required: true
+- list:
+    about: shows all notes
+- show:
+    about: shows selected note
+    args:
+    - id:
+        required: true
+- modify:
+    about: modifies selected note
+    args:
+    - id:
+        short: u
+        long: uuid
+        help: a uuid of the target note
+        required: true
+    - tags:
+        short: t
+        long: tags
+        help: a tags list
+        multiple: true
+        takes_value: true
+    - text:
+        last: true
+        multiple: true
+- delete:
+    about: deletes selected note
+    args:
+    - id:
+        help: a uuid of the target note
+        required: true

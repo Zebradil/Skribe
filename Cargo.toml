@@ -3,6 +3,8 @@ name = "skribe"
 version = "0.1.0"
 authors = ["German Lashevich <german.lashevich@gmail.com>"]
 edition = "2018"
+description = "WIP"
+license = "GPL-3.0"
 
 [dependencies]
 uuid = { version = "0.7.1", features = ["serde", "v4"] }
